@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> To-Do </title>
+    <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/31GfSzHejgL._SY355_.png" type="image/png">
+    <link defer rel="stylesheet" href="./css/style.css">
+    <script defer src='../node_modules/mustache/mustache.min.js'></script>
+    <script defer type="text/javascript" src='../dist/js/bundle.js'></script>
+</head>
+
+<body id="main-body">
+    <div id="action-bar">
+        <input type="text" id="text-box" placeholder="Write something to add">
+        <button id="btn-add" class="input-button">Add</button>
+        <button id="btn-select-all" class="input-button">Select/Deselect All</button>
+        <button id="btn-delete-selected" class="input-button">Delete Selected</button>
+        <button id="btn-delete-completed" class="input-button">Delete Completed</button>
+    </div>
+
+    <div id="list-container">
+    </div>
+
+    <div class="list-item template" todo-id="">
+        <input type="checkbox" class="check-box" todo-action="select-item">
+        <p class="todo-text" todo-action="todo-text"></p>
+        <button class="btn-done" todo-action="mark-done">Done</button>
+        <button class="btn-delete" todo-action="delete-item">Delete</button>
+    </div>
+</body>
+
+</html>
